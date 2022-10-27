@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Button } from 'antd';
-import React, { useState } from 'react';
+import React from 'react';
 import LoginButton from '../LoginButton';
 import LogoutButton from '../LogoutButton';
 
@@ -11,12 +10,9 @@ import {
   TwitterSquareFilled,
   InstagramFilled,
   UserOutlined,
-  MenuOutlined,
 } from '@ant-design/icons';
 
 function AppHeader() {
-  const [setVisible] = useState(false);
-
   return (
     <div className="container">
       {/* topbar */}

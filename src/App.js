@@ -1,7 +1,7 @@
 import 'antd/dist/antd.min.css';
 import './App.css';
 
-import Profile from './components/Profile';
+import Body from './components/Body';
 import { useAuth0 } from '@auth0/auth0-react';
 
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
@@ -9,8 +9,10 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import AppHeader from './components/common/Header';
 import FooterCopyright from './components/common/FooterCopyright';
 
+import BasicTable from './components/Table';
+
 import { Layout } from 'antd';
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 function App() {
   const { isLoading, error } = useAuth0();
@@ -26,6 +28,7 @@ function App() {
               <Header>
                 <AppHeader />
               </Header>
+              <BasicTable />
               <Content>
                 {/* <Routes>
                   <Route
@@ -35,7 +38,9 @@ function App() {
                 </Routes> */}
               </Content>
             </Router>
-            <Profile />
+            <Body />
+            <br />
+            <br />
             <FooterCopyright />
           </Layout>
         </>
