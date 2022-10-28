@@ -4,7 +4,6 @@ import Comments from '../CommentExampleComment';
 
 const Body = () => {
   const login = useRef(1);
-  const comments = useRef(undefined);
   const { user, isAuthenticated } = useAuth0();
 
   useEffect(() => {

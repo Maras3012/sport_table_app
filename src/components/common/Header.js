@@ -9,7 +9,6 @@ import {
   FacebookFilled,
   TwitterSquareFilled,
   InstagramFilled,
-  UserOutlined,
 } from '@ant-design/icons';
 
 function AppHeader() {
@@ -48,11 +47,9 @@ function AppHeader() {
                 <InstagramFilled />
               </a>
             </li>
-          </ul>
-          <button>
-            <UserOutlined /> <LoginButton />
-            <LogoutButton />
-          </button>
+          </ul>{' '}
+          <LoginButton />
+          <LogoutButton />
         </div>
       </div>
       {/* header */}
