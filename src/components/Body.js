@@ -13,7 +13,8 @@ const Body = () => {
         localStorage.setItem('user', user.email);
       } else if (user.email === 'user@maildrop.cc') login.current = 2;
     } else login.current = 3;
-  }, []); // adjust dependencies to your needs
+    console.log(user);
+  }, [user]); // adjust dependencies to your needs
   return isAuthenticated && login.current === 1 && <Comments />;
 };
 
